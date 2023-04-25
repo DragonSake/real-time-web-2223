@@ -1,7 +1,11 @@
 # Real-Time Web @cmda-minor-web 2022 - 2023
 
 ## Table of Contents
-- [Synopsis](#synopsis)
+- [Installation](#synopsis)
+
+https://socket.io/docs/v4/server-socket-instance/
+
+https://socket.io/docs/v4/client-installation/
 
 <!-- Here are some hints for your projects Readme.md! -->
 
