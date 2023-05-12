@@ -2,11 +2,13 @@
 
 # League of Legends champion guesser
 
-<!-- Start out with a title and a description -->
-
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
+Dit is een multiplayer game waar je League of Legends champions kunt raden aan de hand van de tags die je ziet op het scherm. Degene die als eerste de juiste champion in de chat typt, wint.
 
 Live demo: https://real-time-web.adaptable.app/
+
+![image](https://github.com/DragonSake/real-time-web-2223/assets/40611000/149033f3-32e9-405c-a4f6-b6aebe2ba247)
+
+***
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
 
