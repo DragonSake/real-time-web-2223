@@ -12,19 +12,34 @@ Live demo: https://real-time-web.adaptable.app/
 
 # Inhoudsopgave
 
+* Installatie
+* API
+* Features
 * API data model
 * Data flow diagram
 * MoSCoW
 * Bronnen
 * License
 
-<!-- ☝️ replace this description with a description of your own work -->
+***
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+## Installatie
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+
+***
+
+## API
+
+
+
+***
+
+## Features
+
+
+
+***
 
 ## API data model
 
