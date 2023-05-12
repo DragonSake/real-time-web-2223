@@ -12,7 +12,7 @@ Live demo: https://real-time-web.adaptable.app/
 
 # Inhoudsopgave
 
-* Data model
+* API data model
 * Data flow diagram
 * MoSCoW
 * Bronnen
@@ -26,7 +26,7 @@ Live demo: https://real-time-web.adaptable.app/
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 
-## Data model
+## API data model
 
 ![Datamodel](https://github.com/DragonSake/real-time-web-2223/assets/40611000/543a637e-033c-4598-ba93-a3e851fd302e)
 
