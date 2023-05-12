@@ -2,13 +2,17 @@
 
 <main>
     <section>
-        <ul></ul>
+        <h1>League of Legends champion guesser</h1>
+        <h2><%= taggies %></h2>
     </section>
 
-    <form>
-        <input type="text" autocomplete="off">
-        <button><span>Send</span></button>
-    </form>
+    <section>
+        <ul class="messages"></ul>
+        <form>
+            <input type="text" class="input" autocomplete="off" autofocus />
+            <button>Send</button>
+        </form>
+    </section>
 </main>
 
 <%- include('partials/footer.ejs'); -%>
