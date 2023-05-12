@@ -43,22 +43,6 @@ Dit kun je doen door de volgende commando's uit te voeren
 npm install
 ```
 
-```
-npm install nodemon
-```
-
-```
-npm install expres
-```
-
-```
-npm install ejs
-```
-
-```
-npm install socket.io
-```
-
 ### Server starten
 
 Hierna kun je de server starten op je lokale dev environment met de volgende code
