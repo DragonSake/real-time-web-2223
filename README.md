@@ -25,7 +25,20 @@ Live demo: https://real-time-web.adaptable.app/
 
 ## Installatie
 
+### Clone repository
 
+Je kunt dit project installeren op je eigen computer door deze repository te clonen. Je kan gebruik maken van GitHub desktop of de terminal om de volgende commando uit te voeren.
+
+```git clone https//github.com:DragonSake/real-time-web-2223.git
+```
+
+### Install packages
+
+Daarna moeten we de packages installeren
+
+Dit kun je doen door het volgende commando uit te voeren
+
+npm install
 
 ***
 
