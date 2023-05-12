@@ -10,9 +10,13 @@ Live demo: https://real-time-web.adaptable.app/
 
 ***
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
 # Inhoudsopgave
+
+* Data model
+* Data flow diagram
+* MoSCoW
+* Bronnen
+* License
 
 <!-- ☝️ replace this description with a description of your own work -->
 
@@ -22,11 +26,54 @@ Live demo: https://real-time-web.adaptable.app/
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 
-<!-- This would be a good place for your data life cycle ♻️-->
+## Data model
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+![Datamodel](https://github.com/DragonSake/real-time-web-2223/assets/40611000/543a637e-033c-4598-ba93-a3e851fd302e)
 
-<!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
+***
+
+## Data flow diagram
+
+
+
+***
+
+## MoSCoW
+
+M - Must have
+Een must voor het eindproduct
+
+[X] Berichten versturen
+[X] Berichten ontvangen
+[X] Usernames
+[X] API connecten en gebruiken
+[X] History
+[X] Werkt op Adaptable
+[] Wanneer de juiste champion is geraden, dat je iets in de chat ziet 
+
+S - Should have
+Deze features kunnen erbij, maar ze zijn niet noodzakelijk om het te gebruiken
+
+[] Wanneer de juiste champion is geraden, dat je verder gaat naar de volgende champion
+[] Usernames opslaan in database, zodat als iemand vertrekt er geen null komt te staan (null has left the room)
+[] Offline support
+[] Punt voor elk geraden champion
+[] Winnaar
+[] Iconen voor de tags
+
+C - Could have
+Deze features kunnen toegevoeds worden als er genoeg tijd voor is
+
+[] Light en dark mode
+
+W - Would have
+Dit kan in de toekomst toegevoegd worden
+
+***
+
+## Bronnen
+
+
 
 ***
 
