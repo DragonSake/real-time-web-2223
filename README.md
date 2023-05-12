@@ -43,28 +43,28 @@ Live demo: https://real-time-web.adaptable.app/
 M - Must have
 Een must voor het eindproduct
 
-[X] Berichten versturen
-[X] Berichten ontvangen
-[X] Usernames
-[X] API connecten en gebruiken
-[X] History
-[X] Werkt op Adaptable
-[] Wanneer de juiste champion is geraden, dat je iets in de chat ziet 
+- [X] Berichten versturen
+- [X] Berichten ontvangen
+- [X] Usernames
+- [X] API connecten en gebruiken
+- [X] History
+- [X] Werkt op Adaptable
+- [] Wanneer de juiste champion is geraden, dat je iets in de chat ziet 
 
 S - Should have
 Deze features kunnen erbij, maar ze zijn niet noodzakelijk om het te gebruiken
 
-[] Wanneer de juiste champion is geraden, dat je verder gaat naar de volgende champion
-[] Usernames opslaan in database, zodat als iemand vertrekt er geen null komt te staan (null has left the room)
-[] Offline support
-[] Punt voor elk geraden champion
-[] Winnaar
-[] Iconen voor de tags
+- [] Wanneer de juiste champion is geraden, dat je verder gaat naar de volgende champion
+- [] Usernames opslaan in database, zodat als iemand vertrekt er geen null komt te staan (null has left the room)
+- [] Offline support
+- [] Punt voor elk geraden champion
+- [] Winnaar
+- [] Iconen voor de tags
 
 C - Could have
 Deze features kunnen toegevoeds worden als er genoeg tijd voor is
 
-[] Light en dark mode
+- [] Light en dark mode
 
 W - Would have
 Dit kan in de toekomst toegevoegd worden
