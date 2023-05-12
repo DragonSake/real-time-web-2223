@@ -37,9 +37,43 @@ git clone https//github.com:DragonSake/real-time-web-2223.git
 
 Daarna moeten we de packages installeren
 
-Dit kun je doen door het volgende commando uit te voeren
+Dit kun je doen door de volgende commando's uit te voeren
 
+```
 npm install
+```
+
+```
+npm install nodemon
+```
+
+```
+npm install expres
+```
+
+```
+npm install ejs
+```
+
+```
+npm install socket.io
+```
+
+### Server starten
+
+Hierna kun je de server starten op je lokale dev environment met de volgende code
+
+```
+npm run dev
+```
+
+### Localhost
+
+Je server zal starten op
+
+```
+http://localhost:8888/
+```
 
 ***
 
