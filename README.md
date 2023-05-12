@@ -101,7 +101,120 @@ fetchData();
 
 ## Features
 
+### Join and leave
 
+Wanneer er mensen connecten stuur dan een bericht met: "Server: jouwUsername just joined Ting's rift!" Als mensen vertrekken stuur dan een bericht met: "Server: jouwUsername has left Ting's rift!"
+
+Client side
+```JS
+socket.on("user_join", function(data) {
+    addMessage("Server:" + data + " just joined Ting's rift!");
+});
+
+socket.on("user_leave", function(data) {
+      addMessage("Server:" + data + " has left Ting's rift.");
+  });
+```
+
+Server side
+
+Wanneer de gebruiker joint, sla zijn/haar username op en broadcast het naar de clients. Als de gebruiker disconnect, broadcast het naar de clients.
+
+```JS
+socket.on("user_join", function (data) {
+    this.username = data;
+    socket.broadcast.emit("user_join", data);
+
+    // Send chat history to the new connected user
+    socket.emit("history", history);
+  });
+  
+  socket.on("disconnect", function (data) {
+    socket.broadcast.emit("user_leave", this.username);
+  });
+});
+ ```
+ 
+ ***
+
+### Messages
+
+Wanneer een gebruiker een bericht verstuurd, broadcast het naar de clients en verzend het naar de server. Na dat, leeg het invulveld. Daarnaast maak ik een spannen met classes waardoor berichten van anderen geel worden en die van jezelf blauw.
+
+```JS
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  addMessage(username + ": " + input.value);
+
+  socket.emit("chat_message", {
+    message: input.value
+  });
+
+  input.value = "";
+    return false;
+    }, false);
+
+socket.on("chat_message", function(data) {
+addMessage(data.username + ": " + data.message);
+  });
+  
+function addMessage(message) {
+    const li = document.createElement("li");
+      
+    const user = document.createElement("span");
+    const msg = document.createElement("span");
+
+    msg.classList.add("message");
+    user.classList.add("username");
+
+    user.innerHTML = getUsernameFromMessage(message);
+    msg.innerHTML = ": " + message.substring(message.indexOf(": ") + 1);  
+
+    li.appendChild(user);
+    li.appendChild(msg);
+  
+    if (username == user.innerHTML) {
+      li.classList.add("my-message");
+    }else{
+      li.classList.add("other-message");
+    }
+  
+    // Append list item to the messages
+    messages.appendChild(li);
+
+    // Scroll to bottom of messages
+    window.scrollTo(0, document.body.scrollHeight);
+  }  
+```
+
+***
+
+### History
+
+Verstuurd de chat history naar de nieuw geconnecte gebruiker. De history wordt gepusht naar de history array. Verwijder oude berichten als er meer dan 49 berichten zijn.
+
+``JS
+const historySize = 50;
+let history = [];
+
+socket.on("user_join", function (data) {
+    this.username = data;
+    socket.broadcast.emit("user_join", data);
+
+    socket.emit("history", history);
+  });
+  
+socket.on("chat_message", function (data) {
+    data.username = this.username;
+    socket.broadcast.emit("chat_message", data);
+
+    history.push(data);
+
+    if (history.length > historySize) {
+      history.shift();
+    }
+  });
+```
 
 ***
 
