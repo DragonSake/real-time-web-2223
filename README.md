@@ -34,7 +34,7 @@ Live demo: https://real-time-web.adaptable.app/
 
 ## Data flow diagram
 
-
+![Data flow diagram](https://github.com/DragonSake/real-time-web-2223/assets/40611000/129c759e-ddc2-4011-93b6-c632fc8b7b46)
 
 ***
 
