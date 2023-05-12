@@ -81,11 +81,15 @@ http://localhost:8888/
 
 ### Welke API heb ik hiervoor gebruikt?
 
+Voor mijn project wilde ik tags van League of Legends champions laten zien en gebruikers kunnen in de chat kunnen dan raden welke champion dat is. League of Legends heeft zelf een heleboel API's en ik heb de volgende API gevonden voor mijn project. In deze API staat informatie over welke champions er zijn en de eigenschappen ervan.
+
 ```
 http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json
 ```
 
 ### Fetch
+
+Dit is de code die ik heb geschreven voor het fetchen van de data
 
 ```JS
 async function fetchData() {
