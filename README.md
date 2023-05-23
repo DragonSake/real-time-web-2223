@@ -193,7 +193,7 @@ function addMessage(message) {
 
 Verstuurd de chat history naar de nieuw geconnecte gebruiker. De history wordt gepusht naar de history array. Verwijder oude berichten als er meer dan 49 berichten zijn.
 
-``JS
+```JS
 const historySize = 50;
 let history = [];
 
