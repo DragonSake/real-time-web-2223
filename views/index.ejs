@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs'); -%>
+
+<main>
+    <section>
+        <h1>League of Legends champion guesser</h1>
+        <h2><%= taggies %></h2>
+    </section>
+
+    <section>
+        <ul class="messages"></ul>
+        <form>
+            <input type="text" class="input" autocomplete="off" autofocus />
+            <button>Send</button>
+        </form>
+    </section>
+</main>
+
+<%- include('partials/footer.ejs'); -%>

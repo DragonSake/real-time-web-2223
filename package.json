@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "node-fetch": "^3.3.1",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.6.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "type": "module",
+  "name": "rtw",
+  "version": "0.0.1",
+  "main": "server.js",
+  "author": "DragonSake",
+  "license": "MIT",
+  "description": ""
+}
