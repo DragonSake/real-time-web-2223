@@ -14,10 +14,11 @@ form.addEventListener("submit", function(event) {
     message: input.value
   });
 
-  // Clear input field
   input.value = "";
-    return false;
-    }, false);
+    return false;    
+    }, 
+    
+  false);
 
   // When a user joins, set username and broadcast it to the clients
   socket.on("user_join", function(data) {
@@ -79,10 +80,19 @@ form.addEventListener("submit", function(event) {
     messages.appendChild(li);
 
     // Scroll to bottom of messages
-    window.scrollTo(0, document.body.scrollHeight);
+    messages.scrollTop = messages.scrollHeight;
   }
 
 // Returns the username from a message
 function getUsernameFromMessage(message) {
   return message.substring(0, message.indexOf(":"));
 }
+
+// socket guessed_right_champion username alert
+socket.on("guessed_right_champion", function (data) {
+  console.log()
+  // alert(username + " guessed right!");
+  // Adds a message to the user
+  addMessage("Server: " + username + " guessed right!");
+});
+

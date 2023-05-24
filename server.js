@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 // Render index.ejs
 app.get("/", function(req, res) {
-    res.render('index', {taggies: tag}); // render 'index' with the tag variable
+    res.render('index', {taggies: tag, championName: randomChampion.name}); // render 'index' with the tag variable
 });
 
 // Declare randomChampion and tag
@@ -74,6 +74,8 @@ io.on("connection", function (socket) {
 
     // Send chat history to the new connected user
     socket.emit("history", history);
+    // Send random champion name to the new connected user
+    socket.emit("random_champion", randomChampion.name);
   });
 
   // When a user sends a message, broadcast it to the clients
@@ -87,6 +89,11 @@ io.on("connection", function (socket) {
     // Remove oldest message if history array has more than 49 messages
     if (history.length > historySize) {
       history.shift();
+    }
+
+    // if message is equal to randomChampion.name, alert to every client that the champion has been guessed by username
+    if (data.message == randomChampion.name) {
+      socket.emit("guessed_right_champion");
     }
   });
 
