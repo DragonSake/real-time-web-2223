@@ -51,10 +51,14 @@ async function fetchData() {
 
     // Set tag to Random tag(s): + randomChampion.tags
     tag = "Random tag(s): " + randomChampion.tags;
+
+    // Emit new champion data to all connected clients
+    io.emit("new_champion", tag);
+
     return filteredChampions;
 }
 
-// Call fetchData() function
+// Call fetchData() function initially
 fetchData();
 
 // Chat history amount of messages and an empty array
@@ -94,6 +98,8 @@ io.on("connection", function (socket) {
     // if message is equal to randomChampion.name, alert to every client that the champion has been guessed by username
     if (data.message == randomChampion.name) {
       socket.emit("guessed_right_champion");
+      socket.broadcast.emit("guessed_right_champion");
+      fetchData();
     }
   });
 

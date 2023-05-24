@@ -93,6 +93,13 @@ socket.on("guessed_right_champion", function (data) {
   console.log()
   // alert(username + " guessed right!");
   // Adds a message to the user
-  addMessage("Server: " + username + " guessed right!");
+  addMessage("Server: " + username + ` guessed right!`);
 });
 
+socket.on("new_champion", function (tags) {
+  // Adds a message to the user
+  addMessage("Server: A new champion has been selected!");
+  // change tags to new champion tags
+  console.log(tags)
+  document.querySelector("h2").innerHTML = `${tags}`;
+} );
