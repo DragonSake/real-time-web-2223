@@ -53,9 +53,7 @@ async function fetchData() {
     tag = "Random tag(s): " + randomChampion.tags;
 
     // Emit new champion data to all connected clients
-    io.emit("new_champion", tag);
-
-    return filteredChampions;
+    io.emit("new_champion", tag, randomChampion);
 }
 
 // Call fetchData() function initially

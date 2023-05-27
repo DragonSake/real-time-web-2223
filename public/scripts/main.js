@@ -35,6 +35,11 @@ form.addEventListener("submit", function(event) {
       addMessage("Server:" + data + " has left Ting's rift.");
   });
 
+  socket.on('random_champion', (randomChampion) => {
+    // Access the random champion data here
+    console.log(randomChampion);
+});
+
   // When a user joins, bring chat history
   socket.on("history", function (history) {
   history.forEach(function (message) {
@@ -89,17 +94,12 @@ function getUsernameFromMessage(message) {
 }
 
 // socket guessed_right_champion username alert
-socket.on("guessed_right_champion", function (data) {
-  console.log()
-  // alert(username + " guessed right!");
-  // Adds a message to the user
-  addMessage("Server: " + username + ` guessed right!`);
+socket.on("guessed_right_champion", function () {
+  addMessage("Server: " + username + ` guessed the right champion!`);
 });
 
-socket.on("new_champion", function (tags) {
-  // Adds a message to the user
+socket.on("new_champion", function (tags, randomChampion) {
   addMessage("Server: A new champion has been selected!");
-  // change tags to new champion tags
-  console.log(tags)
   document.querySelector("h2").innerHTML = `${tags}`;
-} );
+  console.log(randomChampion.name);
+});
