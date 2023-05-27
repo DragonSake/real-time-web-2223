@@ -94,7 +94,7 @@ io.on("connection", function (socket) {
     }
 
     // if message is equal to randomChampion.name, alert to every client that the champion has been guessed by username
-    if (data.message == randomChampion.name) {
+    if (data.message.toLowercase == randomChampion.name.toLowercase) {
       socket.emit("guessed_right_champion");
       socket.broadcast.emit("guessed_right_champion");
       fetchData();
