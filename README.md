@@ -2,7 +2,7 @@
 
 # League of Legends champion guesser
 
-Dit is een multiplayer game waar je League of Legends champions kunt raden aan de hand van de tags die je ziet op het scherm. Degene die als eerste de juiste champion in de chat typt, wint.
+Voor Real Time Web heb ik een game gemaakt waar je League of Legends champions kunt raden aan de hand van de tags die je ziet op het scherm. Iedereen ziet dezelfde tags. Je kunt met andere mensen chatten of je kunt de champion raden. Degene die als eerste de juiste champion in de chat typt, wint. Wanneer de juiste champion is geraden, verschijnt er een nieuwe champion.
 
 Live demo: https://real-time-web.adaptable.app/
 
@@ -78,7 +78,9 @@ http://localhost:8888/
 
 ### Welke API heb ik hiervoor gebruikt?
 
-Voor mijn project wilde ik tags van League of Legends champions laten zien en gebruikers kunnen in de chat kunnen dan raden welke champion dat is. League of Legends heeft zelf een heleboel API's en ik heb de volgende API gevonden voor mijn project. In deze API staat informatie over welke champions er zijn en de eigenschappen ervan.
+Voor mijn project wilde ik tags van League of Legends champions laten zien en gebruikers kunnen in de chat kunnen dan raden welke champion dat is. League of Legends heeft zelf een heleboel API's en ik heb de volgende API gevonden voor mijn project. In deze API staat informatie over welke champions er zijn en de eigenschappen ervan. Vervolgens heb ik de data ervan gefiltered, want ik heb alleen de champion naam en tags ervan nodig. Daarna heb ik de data gerandomized met Math.random, zodat er telkens een nieuwe champion wordt gegenereerd.
+
+Gebruikte API:
 
 ```
 http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json
@@ -86,7 +88,7 @@ http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json
 
 ### Fetch
 
-Dit is de code die ik heb geschreven voor het fetchen van de data
+Dit is de code die ik heb geschreven voor het fetchen van de data. Hier haal ik de data op vanuit de link en zet die in een constante genaamd url. 
 
 ```JS
 async function fetchData() {
