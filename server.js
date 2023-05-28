@@ -50,7 +50,8 @@ async function fetchData() {
     console.log(randomChampion.tags)
 
     // Set tag to Random tag(s): + randomChampion.tags
-    tag = "Random tag(s): " + randomChampion.tags;
+    tag = "Random tag(s): " + randomChampion.tags.join(", ");
+
 
     // Emit new champion data to all connected clients
     io.emit("new_champion", tag, randomChampion);
@@ -94,11 +95,11 @@ io.on("connection", function (socket) {
     }
 
     // if message is equal to randomChampion.name, alert to every client that the champion has been guessed by username
-    if (data.message.toLowercase == randomChampion.name.toLowercase) {
+    if (data.message.toLowerCase() === randomChampion.name.toLowerCase()) {
       socket.emit("guessed_right_champion");
       socket.broadcast.emit("guessed_right_champion");
       fetchData();
-    }
+    }    
   });
 
   // When a user disconnects, broadcast it to the clients
