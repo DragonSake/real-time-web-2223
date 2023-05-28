@@ -88,7 +88,7 @@ http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json
 
 ### Fetch
 
-Dit is de code die ik heb geschreven voor het fetchen van de data. Hier haal ik de data op vanuit de link en zet die in een constante genaamd url. 
+Dit is de code die ik heb geschreven voor het fetchen van de data. Hier haal ik de data op vanuit de link en zet die in een constante genaamd url. Daarna filter ik de data, want ik heb alleen de champion naam en tags ervan nodig. Vervolgens heb ik de data gerandomized met Math.random, zodat er telkens een nieuwe champion wordt gegenereerd.
 
 ```JS
 async function fetchData() {
@@ -119,7 +119,7 @@ fetchData();
 
 ### Join and leave
 
-Wanneer er mensen connecten stuur dan een bericht met: "Server: jouwUsername just joined Ting's rift!" Als mensen vertrekken stuur dan een bericht met: "Server: jouwUsername has left Ting's rift!"
+Wanneer er nieuwe mensen verbinding maken met de server, word er een bericht verstuurd met: "Server: jouwUsername just joined Ting's rift!" Als mensen besluiten te verlaten, word er een bericht verstuurd met: "Server: jouwUsername has left Ting's rift!"
 
 Client side
 ```JS
@@ -134,7 +134,7 @@ socket.on("user_leave", function(data) {
 
 Server side
 
-Wanneer de gebruiker joint, sla zijn/haar username op en broadcast het naar de clients. Als de gebruiker disconnect, broadcast het naar de clients.
+Wanneer er nieuwe mensen verbinding maken met de server, zal de server de usernames van die mensen opslaan en een bericht met de tag "user_join" uitzenden naar alle clients. Als mensen besluiten te verlaten, zal de server een bericht uitzenden naar andere clients als doel om andere gebruikers te laten weten dat er iemand is vertrokken. 
 
 ```JS
 socket.on("user_join", function (data) {
@@ -155,7 +155,7 @@ socket.on("user_join", function (data) {
 
 ### Messages
 
-Wanneer een gebruiker een bericht verstuurd, broadcast het naar de clients en verzend het naar de server. Na dat, leeg het invulveld. Daarnaast maak ik een spannen met classes waardoor berichten van anderen geel worden en die van jezelf blauw.
+Wanneer een gebruiker een bericht verstuurt, wordt dit bericht naar zowel de andere clients als de server verzonden. Daarna wordt het invulveld leeggemaakt, zodat de gebruiker weer een bericht kan typen. Daarnaast maak ik spannen met classes waardoor berichten van anderen geel worden en die van jezelf blauw.
 
 ```JS
 form.addEventListener("submit", function(event) {
@@ -207,7 +207,7 @@ function addMessage(message) {
 
 ### History
 
-Verstuurd de chat history naar de nieuw geconnecte gebruiker. De history wordt gepusht naar de history array. Verwijder oude berichten als er meer dan 49 berichten zijn.
+De geschiedenis wordt bijgehouden, zodat nieuw geconnecte gebruikers de chatgeschiedenis nog kunnen lezen en weten welke guesses er al waren gedaan. Hiermee kunnen ze weten wat het antwoord niet was en verdergaan met raden. De history wordt gepusht naar de history array. Als er meer dan 49 berichten in de geschiedenis staan, moeten we de oudste berichten verwijderen om ruimte te maken voor nieuwe berichten.
 
 ```JS
 const historySize = 50;
