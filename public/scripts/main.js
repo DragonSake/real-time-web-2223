@@ -95,7 +95,7 @@ function getUsernameFromMessage(message) {
 
 // socket guessed_right_champion username alert
 socket.on("guessed_right_champion", function () {
-  addMessage("Server: " + username + ` guessed the right champion!`);
+  addMessage("Server: The right champion has been guessed!");
 });
 
 socket.on("new_champion", function (tags, randomChampion) {
