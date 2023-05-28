@@ -236,7 +236,7 @@ socket.on("chat_message", function (data) {
 
 ### Check guess
 
-Zet de berichten om in lowercase en checkt de berichten of ze gelijk zijn met de champion naam. Het verstuurt guessed_right_champion naar alle andere clients. Vervolgens doet het een nieuwe fetch om een nieuwe champion te genereren.
+De ontvangen berichten wordt omgezet naar kleine letters (lowercase) en er wordt gecontroleerd of ze gelijk zijn met de naam van de champion. Als een gebruiker de juiste champion raadt, wordt er een bericht "guessed_right_champion" verzonden naar alle clients sturen. Daarna wordt er een nieuwe fetch gedaan om een nieuwe champion te genereren voor het spel.
 
 ```JS
 if (data.message.toLowerCase() === randomChampion.name.toLowerCase()) {
@@ -274,7 +274,7 @@ socket.on("new_champion", function (tags, randomChampion) {
 
 ### Easter egg
 
-Voor noobs of mensen die het echt niet kunnen raden heb ik een Easter egg in toegevoegd. In de console kan je namelijk zien wat het antwoord is.
+In de console kan je zien wat het antwoord is. Dit is bedoeld voor mensen die echt niet kunnen raden.
 
 ```JS
 console.log(randomChampion.name);
