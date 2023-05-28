@@ -284,11 +284,15 @@ console.log(randomChampion.name);
 
 ## API data model
 
+Dit is het data model van de API die ik heb gebruikt. Ik haal van elke champion de name en tags op en zet die in een nieuwe array.
+
 ![Datamodel](https://github.com/DragonSake/real-time-web-2223/assets/40611000/543a637e-033c-4598-ba93-a3e851fd302e)
 
 ***
 
 ## Data flow diagram
+
+Ik haal de data op vanuit de API. Als de gebruiker verbinding maakt met de server, krijgt hij/zij een prompt waar hij/zij zijn/haar username kan invullen. Vervolgens kan je beginnen met chatten. Alle berichten opgeslagen in een array op de server en getoont op de client. De berichten worden gecontroleerd of het de juiste champion is. Wanneer de juiste champion is geraden, word er een bericht verstuurd naar alle clients en zal er een nieuwe fetch gedaan worden.
 
 ![Data flow diagram](https://github.com/DragonSake/real-time-web-2223/assets/40611000/e6b20cfc-8ed8-4e73-b854-c3f95158dde0)
 
