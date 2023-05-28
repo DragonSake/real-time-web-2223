@@ -288,7 +288,7 @@ console.log(randomChampion.name);
 
 ## Data flow diagram
 
-![Data flow diagram](https://github.com/DragonSake/real-time-web-2223/assets/40611000/129c759e-ddc2-4011-93b6-c632fc8b7b46)
+![Data flow diagram](https://github.com/DragonSake/real-time-web-2223/assets/40611000/e6b20cfc-8ed8-4e73-b854-c3f95158dde0)
 
 ***
 
