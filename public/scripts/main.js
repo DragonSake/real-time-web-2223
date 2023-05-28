@@ -93,11 +93,13 @@ function getUsernameFromMessage(message) {
   return message.substring(0, message.indexOf(":"));
 }
 
-// socket guessed_right_champion username alert
+// When the right champion is guessed, alert to every client that the champion has been guessed
 socket.on("guessed_right_champion", function () {
   addMessage("Server: The right champion has been guessed!");
 });
 
+// When the right champion is guessed, alert to every client that a new champion has been selected
+// Update the tags
 socket.on("new_champion", function (tags, randomChampion) {
   addMessage("Server: A new champion has been selected!");
   document.querySelector("h2").innerHTML = `${tags}`;

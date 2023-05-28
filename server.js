@@ -52,7 +52,6 @@ async function fetchData() {
     // Set tag to Random tag(s): + randomChampion.tags
     tag = "Random tag(s): " + randomChampion.tags.join(", ");
 
-
     // Emit new champion data to all connected clients
     io.emit("new_champion", tag, randomChampion);
 }
