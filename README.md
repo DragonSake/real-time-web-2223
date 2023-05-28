@@ -26,7 +26,7 @@ Live demo: https://real-time-web.adaptable.app/
     + [History](#history)
     + [Check guess](#check-guess)
     + [Guessed right champion](#guessed-right-champion)
-    + [New champion](#new champion)
+    + [New champion](#new-champion)
     + [Easter egg](#easter-egg)
   * [API data model](#api-data-model)
   * [Data flow diagram](#data-flow-diagram)
